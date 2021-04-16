@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Questrial', sans-serif;
+  color: antiquewhite;
+  
+}
+.fondo{
+  background-image: url("olas.png");
+ 
+  background-color: #002fa7;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-position:bottom; */
+  background-position-y: 75vh;
+  background-size: 100%;
+} 
+
+/* CAMBIOS EN EL JS */
+.rotate{
+  transform: rotate(90deg);
+  transform-origin: 1rem 1rem;
+}
+.hidden{
+visibility: hidden;
+}
+
+.none{
+  display: none;
+}
+
+/* HEADER */
+header{
+  margin-bottom: 1rem;
+}
+h2{
+  padding-left: 3rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+
+/* BARCOS */
+
+.barcoContainer{
+  height: 19.9rem;
+  width: 17rem;
+  /* border: solid 0.15rem antiquewhite; */
+
+  margin: 4rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  margin-left: 6rem;
+
+}
+
+.barco{
+  padding-top: 4rem;
+}
+.drag1{
+  background-color: antiquewhite;
+  width: 1.9rem;
+  height: 1.9rem;
+  position:absolute;
+}
+
+
+.drag2{
+  background-color: antiquewhite;
+  width: 3.9rem;
+  height: 1.9rem;
+  position:absolute;
+}
+
+.drag3{
+  display: flex;
+  background-color: antiquewhite;
+  width: 5.9rem;
+  height: 1.9rem;
+  position:absolute;
+}
+.drag4{
+  display: flex;
+  background-color: antiquewhite;
+  width: 7.9rem;
+  height: 1.9rem;
+  position:absolute;
+}
+
+.drag1:hover,
+.drag2:hover,
+.drag3:hover,
+.drag4:hover{
+background-color: antiquewhite;
+}
+
+
+.barcos1{
+  display: flex;  
+  height: 3.5em;
+  user-select: none;
+  padding-left: 1.5rem;
+
+}
+
+.barcos2{
+  display: flex;  
+  height: 4.5em;
+  user-select: none;
+  padding-left: 1.5rem;
+
+}
+
+.barcos3{
+  display: flex;  
+  height: 6.5em;
+  user-select: none;
+  padding-left: 1.5rem;
+
+}
+
+.barcos4{
+  display: flex;  
+  height: 8.5em;
+  user-select: none;
+  padding-left: 1.5rem;
+
+}
+
+.todosLosBarcos{
+  margin-right: 3rem;
+  user-select: none;
+}
+.todosLosBarcos2{
+  margin-right: 5rem;
+  user-select: none;
+}
+.todosLosBarcos3{
+  margin-right: 7rem;
+  user-select: none;
+  
+}
+
+
+/* TABLERO BARCOS */
+#tableroBarcos{
+  display: flex;  
+  width: 65vw;
+  user-select: none;
+  position: absolute;
+  padding: 2.6rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem;
+  grid-template-rows: 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem;
+  user-select: none; 
+  margin-left: 4rem;
+  margin-right: 1rem;  
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  border: solid 0.1rem antiquewhite;  
+}
+
+
+.grid div{
+  border: solid 0.005rem antiquewhite;
+  user-select: none;
+  display: flex;
+
+}
+
+
+
+
+.muertos{
+  margin-left: 4rem;
+  font-size: 1.2rem;
+}
+
+.turno{
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  padding-bottom: 0.4rem;
+  
+}
+/* CHAT ABIERTO */
+
+
+#chatInicio{
+position: relative;
+
+}
+.todoChatInicio{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.chat {
+  /* width: 20%; */  
+  min-height: 25vh; 
+  max-height: 25vh;
+  width: 19.5vw;
+  overflow: scroll;
+  border: 0.15rem solid antiquewhite;
+}
+
+.mensajeNombre{
+  font-weight: 800;
+  font-size: 1rem;
+  margin-left: 0.7rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+.mensajeMensaje{
+  margin-left: 0.7rem;
+  padding: 0.4rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.2rem;
+
+  border: 0.02rem solid antiquewhite;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form>textarea{
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  background-color: #002fa7;
+  border: 0.15rem solid antiquewhite;
+  color: antiquewhite;
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
+  
+}
+
+form>textarea:hover{
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  background-color: antiquewhite;
+  color: #002fa7;
+  border: 0.15rem solid antiquewhite;
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
+  
+}
+.juego{
+  padding-right: 10rem;
+}
+
+/* #app{
+  
+} */
+
+.app{
+  padding-top: 7rem;
+  padding-bottom: 0;
+  padding-right: 8rem;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  border-style:solid;
+
+  padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  background-color: #002fa7;
+  border-color: antiquewhite;
+  margin-bottom: 1rem;
+  
+}
+input:hover{
+  background-color: antiquewhite;
+  color: #002fa7;
+}
+
+button{
+  border-style: solid;
+  padding: 0.5rem;
+  background-color: #002fa7;
+  border-color: antiquewhite;
+}
+button:hover{
+  background-color: antiquewhite;
+  color: #002fa7;
+}
+
+
+/* CAMBIAR BOTÓN DEL ALERT. EDITAR LOS ALERTS!! */
+.swal-button {
+  border-style: solid;
+  padding: 0.5rem;
+  background-color: 002fa7;
+  border-color: antiquewhite;
+}
+
+.swal-button:hover {
+  background-color: antiquewhite;
+  color: white;
+}
+
+
+
+
+
+ 
+
+#ocultador{
+  width: 20rem;
+  height: 20rem;
+  background-color:rgba(255, 255, 255, 0.137);  
+  position:absolute;
+  border: none
+}
+
+
+ 
+
+
+/* JUEGO */
+
+.nombre{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 4rem;
+}
+
+
+h3{
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+.dddd{
+  background-color: rgba(255, 255, 255, 0.247);
+
+}
+
+
+.agua{
+  background: repeating-radial-gradient(  #000000, #000000 0.35rem, rgba(0, 0, 0, 0.068) 0.002rem, rgba(255, 255, 255, 0) 1.5rem);
+
+}
+/* ·#allGame{
+  position: relative;
+} */
+.imgOla{
+  width: 98.7vw;
+  
+}
+.imgOlaDiv{
+  position: absolute;
+
+}
+
+
+
+.instrucciones{
+  display: flex;
+}
+.instruccionesP{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rem;
+}
+.instruccionesPNoMargin{
+  display: flex;
+  flex-direction: column;
+}
+
+.instruccionesDiv{
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.instruccionesS{
+  margin-top: 0.5rem;
+}
+
+.instruccionesI{
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.bold{
+  font-weight: 900;
+}
+
+.noMargin{
+  margin: 0;
+  padding: 0;
+}
